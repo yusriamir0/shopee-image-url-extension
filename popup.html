@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Detector</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <span class="icon">🛍️</span>
+                <h1>Shopee Detector</h1>
+            </div>
+        </header>
+        <main>
+            <div id="status-card" class="card">
+                <div class="status-icon" id="status-icon">🔎</div>
+                <p id="status-message">Checking website...</p>
+            </div>
+            <div id="id-container" class="id-container hidden">
+                <div class="id-row">
+                    <span class="label">Shop ID:</span>
+                    <span id="shop-id" class="value">-</span>
+                </div>
+                <div class="id-row">
+                    <span class="label">Item ID:</span>
+                    <span id="item-id" class="value">-</span>
+                </div>
+                <div id="gallery-container" class="gallery-container hidden">
+                    <button id="gallery-btn" class="primary-btn">Image Gallery</button>
+                    <button id="variation-btn" class="primary-btn">Variation Images</button>
+                    <button id="rating-btn" class="primary-btn">Rating Images</button>
+                    <div id="url-results" class="url-list-only">
+                        <!-- URLs will be injected here -->
+                    </div>
+                </div>
+        </main>
+        <footer>
+            <p>v1.0.0</p>
+        </footer>
+    </div>
+    <script src="convertToID.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
