@@ -22,9 +22,10 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    width: 620px;
-    height: auto;
-    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container {
@@ -287,3 +288,76 @@ footer {
 footer p {
     font-size: 0.75rem;
 }
+
+/* ── Video Button ─────────────────────────────────────────────────────────── */
+.video-btn {
+    background: linear-gradient(135deg, #6a0dad 0%, #9b59b6 100%);
+}
+
+.video-btn:hover {
+    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.45);
+}
+
+/* ── Video URL Item ───────────────────────────────────────────────────────── */
+.video-url-item {
+    align-items: center;
+    gap: 10px;
+}
+
+.video-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    width: 36px;
+    text-align: center;
+}
+
+.video-copy-btn {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    background: rgba(106, 13, 173, 0.25);
+    border: 1px solid rgba(155, 89, 182, 0.5);
+    border-radius: 6px;
+    color: #c39bd3;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.video-copy-btn:hover {
+    background: rgba(106, 13, 173, 0.5);
+    color: #fff;
+}
+
+/* ── Download Video Button ────────────────────────────────────────────────── */
+.download-video-btn {
+    background: linear-gradient(135deg, #1a7a4a 0%, #27ae60 100%);
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-video-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.download-video-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.download-video-btn:hover {
+    box-shadow: 0 4px 16px rgba(39, 174, 96, 0.5);
+}
+
+.download-video-btn:disabled {
+    background: linear-gradient(135deg, #145c38 0%, #1e8449 100%);
+    opacity: 0.85;
+    cursor: wait;
+}

@@ -1,18 +1,29 @@
 {
   "manifest_version": 3,
   "name": "Shopee Malaysia Detector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Detects and extracts product info from Shopee Malaysia.",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "downloads",
+    "tabs",
+    "windows"
   ],
   "host_permissions": [
     "https://shopee.com.my/*",
-    "https://*.img.susercontent.com/*"
+    "https://*.img.susercontent.com/*",
+    "https://*.vod.susercontent.com/*"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_icon": {
+      "16": "Kopi.png",
+      "48": "Kopi.png",
+      "128": "Kopi.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
   },
   "icons": {
     "16": "Kopi.png",
